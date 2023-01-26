@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--
+            Uma loja de eletrodomésticos estabeleceu as seguintes
+            modalidades de pagamento para a venda de suas mercadorias:
+            a vista desconto de 2,5% sobre o preço de tabela
+            de 2 ate 5 vezes preço de tabela sem desconto ou acrescimo
+            de 6 ate 10 vezes juros de 6% sobre o preço da tabela
+            de 11 a 15 vezes juros de 13% sobre o preço da tabela
+            Escreva um algoritmo que armazene o preço de tabela e o número
+            de vezes em que o pagamento será feito. Calcule o valor de cada
+            parcela e o preço total da compra e imprima no console.
+    -->
+    <script>
+      let precoTabela = 100; // valor a ser inserido pelo usuário
+      let numParcelas = 8; // valor a ser inserido pelo usuário
+
+      if (numParcelas === 1) {
+        let valorFinal = precoTabela - precoTabela * 0.025;
+        console.log("Valor final: R$" + valorFinal);
+      } else if (numParcelas >= 2 && numParcelas <= 5) {
+        console.log("Valor final: R$" + precoTabela);
+      } else if (numParcelas >= 6 && numParcelas <= 10) {
+        let juros = precoTabela * 0.06;
+        let valorFinal = precoTabela + juros;
+        console.log("Valor final: R$" + valorFinal);
+      } else if (numParcelas >= 11 && numParcelas <= 15) {
+        let juros = precoTabela * 0.13;
+        let valorFinal = precoTabela + juros;
+        console.log("Valor final: R$" + valorFinal);
+      } else {
+        console.log("Número de parcelas inválido");
+      }
+
+      let valorParcela = valorFinal / numParcelas;
+      console.log("Valor da parcela: R$" + valorParcela);
+    </script>
+  </body>
+</html>

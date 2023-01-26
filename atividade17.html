@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--
+        Escreva um algoritmo que armazene o número total de eleitores de
+        um município, o número de votos brancos, nulos e válidos. Calcular
+        e escrever o percentual que cada um representa em relação ao
+        total de eleitores. O algoritmo deve fazer uma validação para que as
+        porcentagens dos votos armazenados (brancos, nulos e válidos)
+        respeitem o limite do número total de eleitores, ou seja, garantir que
+        a soma dos votos brancos, nulos e válidos não seja maior que o
+        número total de eleitores.
+
+        let
+    -->
+    <script>
+      //Declaração das variáveis
+      let totalEleitores = 1000;
+      let votosBrancos = 200;
+      let votosNulos = 100;
+      let votosValidos = 700;
+
+      //Validação
+      if (votosBrancos + votosNulos + votosValidos > totalEleitores) {
+        console.log(
+          "A soma dos votos brancos, nulos e válidos é maior que o número total de eleitores"
+        );
+      } else {
+        //Cálculo do percentual dos votos brancos
+        let percentualBrancos = (votosBrancos / totalEleitores) * 100;
+        console.log("Percentual de votos brancos: " + percentualBrancos + "%");
+
+        //Cálculo do percentual dos votos nulos
+        let percentualNulos = (votosNulos / totalEleitores) * 100;
+        console.log("Percentual de votos nulos: " + percentualNulos + "%");
+
+        //Cálculo do percentual dos votos válidos
+        let percentualValidos = (votosValidos / totalEleitores) * 100;
+        console.log("Percentual de votos válidos: " + percentualValidos + "%");
+      }
+    </script>
+  </body>
+</html>

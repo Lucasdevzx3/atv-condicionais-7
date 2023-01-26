@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--
+            Leia um número, utilizando WHILE multiplique este número por 3
+    enquanto a soma seja menor que 500 e no final mostre qual o
+    último valor
+        let num 
+        let soma
+        soma < 500 soma = num *3
+
+-->
+    <script>
+      let num = prompt("Informe um número:");
+      let soma = 0;
+
+      while (soma < 500) {
+        soma = num * 3;
+        num = soma;
+      }
+      console.log("Último valor: " + soma);
+    </script>
+  </body>
+</html>

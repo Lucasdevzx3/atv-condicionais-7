@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--
+        Crie um algoritmo que armazene três valores, para cada um dos
+        lados de um triângulo: A, B e C. Verifique se os lados fornecidos
+        formam realmente um triângulo. Se formar, deve mostrar no console
+        o tipo de triângulo: isósceles, escaleno ou equilátero.
+        a. Para verificar se os lados fornecidos formam um triângulo: A <
+        B + C e B < A + C e C < A + B.
+        b. Triângulo isósceles: possui dois lados iguais (A=B ou A=C ou
+        B=C);
+        c. Triângulo escaleno: possui todos os lados diferentes (A<>B e
+        B<>C e A<>C);
+        d. Triângulo equilátero: possui todos os lados iguais (A=B e
+        B=C);
+    -->
+    <script>
+      let a = prompt("Informe o lado A do triângulo:");
+      let b = prompt("Informe o lado B do triângulo:");
+      let c = prompt("Informe o lado C do triângulo:");
+
+      if (a < b + c && b < a + c && c < a + b) {
+        if (a === b && b === c) {
+          console.log("Triângulo equilátero");
+        } else if (a === b || a === c || b === c) {
+          console.log("Triângulo isósceles");
+        } else {
+          console.log("Triângulo escaleno");
+        }
+      } else {
+        console.log("Os valores informados não formam um triângulo");
+      }
+    </script>
+  </body>
+</html>

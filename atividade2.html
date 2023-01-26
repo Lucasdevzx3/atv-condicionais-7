@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+        <!--Para o mesmo exercício acima insira mais uma variável a
+        condicional, além de saber se o motorista tem 18 anos ou mais,
+        temos que saber também se ele é habilitado para dirigir. Caso ele
+        tenha idade maior ou igual a 18 anos e possua habilitação, insira no
+        html “Pode dirigir” caso contrário imprima “Não pode dirigir”.
+           
+            let idade motorista
+            let possuicnh
+                confirm() é uma função do JavaScript que exibe uma caixa de diálogo de confirmação
+             com botões "OK" e "Cancelar". 
+             Essa função retorna true se o usuário clicar em "OK" 
+             e false se o usuário clicar em "Cancelar". stackoverflow
+             else log n pode dirigir se for menor q 17 
+             else log n pode dirigir se n tiver cnh
+
+        -->
+  <body>
+    <script>
+      let idadeMotorista = parseInt(prompt("Informe a idade do motorista:"));
+      let possuiHabilitacao = confirm("O motorista possui habilitação?");
+
+      if (idadeMotorista >= 18) {
+        if (possuiHabilitacao) {
+          console.log("Pode dirigir");
+        } else {
+          console.log("Não pode dirigir, pois não possui habilitação");
+        }
+      } else {
+        console.log("Não pode dirigir, pois não possui idade mínima");
+      }
+    </script>
+  </body>
+</html>
