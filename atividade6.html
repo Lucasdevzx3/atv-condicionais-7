@@ -7,19 +7,21 @@
     <title>Document</title>
   </head>
   <!--
-
+      Insira no html 30 ( trinta ) números ímpares.
+      let num
+      i = i <30 i++
+      doc write para escrever no html
     -->
   <body>
     <script>
-      let html = "";
-      for (let i = 1; i <= 59; i += 2) {
-        html += "<p>" + i + "</p>";
-        if (i >= 59) {
-          break;
-        }
+      let num = 1;
+
+      for (let i = 0; i < 30; i++) {
+        document.write(num + "<br>");
+        num += 2;
       }
-      
-    document.getElementById("resultado");
+
+      console.log("resultado");
     </script>
   </body>
 </html>

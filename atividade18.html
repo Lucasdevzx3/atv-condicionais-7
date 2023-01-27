@@ -17,30 +17,47 @@
             Escreva um algoritmo que armazene o preço de tabela e o número
             de vezes em que o pagamento será feito. Calcule o valor de cada
             parcela e o preço total da compra e imprima no console.
-    -->
-    <script>
-      let precoTabela = 100; // valor a ser inserido pelo usuário
-      let numParcelas = 8; // valor a ser inserido pelo usuário
+            
+            let preco tabela 
+            let num parcelas
+            let a vista
+            e let parcelado preco final = preço tabela * 2.5/ 100
+         
+         
+          -->
 
-      if (numParcelas === 1) {
-        let valorFinal = precoTabela - precoTabela * 0.025;
-        console.log("Valor final: R$" + valorFinal);
-      } else if (numParcelas >= 2 && numParcelas <= 5) {
-        console.log("Valor final: R$" + precoTabela);
-      } else if (numParcelas >= 6 && numParcelas <= 10) {
-        let juros = precoTabela * 0.06;
-        let valorFinal = precoTabela + juros;
-        console.log("Valor final: R$" + valorFinal);
-      } else if (numParcelas >= 11 && numParcelas <= 15) {
-        let juros = precoTabela * 0.13;
-        let valorFinal = precoTabela + juros;
-        console.log("Valor final: R$" + valorFinal);
-      } else {
+    <script>
+      let precoTabela = 1000;
+      let numeroParcelas = 16;
+
+      // Condição para pagamento à vista
+      if (numeroParcelas === 1) {
+        let precoFinal = precoTabela - (precoTabela * 2.5) / 100;
+        console.log("Preço final à vista: R$" + precoFinal);
+      }
+      // Condição para pagamento parcelado de 2 a 5 vezes
+      else if (numeroParcelas >= 2 && numeroParcelas <= 5) {
+        console.log("Preço final parcelado sem juros: R$" + precoTabela);
+      }
+      // Condição para pagamento parcelado de 6 a 10 vezes
+      else if (numeroParcelas >= 6 && numeroParcelas <= 10) {
+        let precoFinal = precoTabela + (precoTabela * 6) / 100;
+        let valorParcela = precoFinal / numeroParcelas;
+        console.log("Preço final parcelado com juros de 6%: R$" + precoFinal);
+        console.log("Valor da parcela: R$" + valorParcela);
+      }
+      // Condição para pagamento parcelado de 11 a 15 vezes
+      else if (numeroParcelas >= 11 && numeroParcelas <= 15) {
+        let precoFinal = precoTabela + (precoTabela * 13) / 100;
+        let valorParcela = precoFinal / numeroParcelas;
+        console.log("Preço final parcelado com juros de 13%: R$" + precoFinal);
+        console.log("Valor da parcela: R$" + valorParcela);
+      }
+      // Condição para número de parcelas inválido
+      else {
         console.log("Número de parcelas inválido");
       }
-
-      let valorParcela = valorFinal / numParcelas;
-      console.log("Valor da parcela: R$" + valorParcela);
+      
     </script>
   </body>
 </html>
